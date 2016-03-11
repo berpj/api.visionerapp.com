@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_ADDRESS'] %>
+  port: <%= ENV['DB_PORT'] %>
+  sslmode: 'verify-full'
+  sslrootcert: 'config/ca/rds-combined-ca-bundle.pem'
