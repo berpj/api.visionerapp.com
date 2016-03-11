@@ -5,7 +5,7 @@ class Api::V1::FilesController < Api::ApiController
 
   def upload
 
-    b64_data = params[:data].read
+    b64_data = params[:data]
 
     # Prepare request
     api_key = ENV['GOOGLE_API_KEY']
