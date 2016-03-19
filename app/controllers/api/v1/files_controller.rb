@@ -43,16 +43,16 @@ class Api::V1::FilesController < Api::ApiController
       res = Net::HTTP.new(url.host, url.port)
       res.use_ssl = true
 
-      label = 'unknown'
+      label = nil
       res.start do |http|
         resp = http.request(req)
         json = JSON.parse(resp.body)
         if json && json["responses"] && json["responses"][0]["labelAnnotations"] && json["responses"][0]["labelAnnotations"][0]["description"]
-          @image[:label] = json['responses'][0]['labelAnnotations'][0]['description']
+          label = json['responses'][0]['labelAnnotations'][0]['description']
         end
       end
 
-      @image = Image.create(@image)
+      @image = Image.find_or_create_by(md5: md5, label: label)
 
     end
 

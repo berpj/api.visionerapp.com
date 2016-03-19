@@ -23,6 +23,8 @@ class Api::V1::GeocodesController < Api::ApiController
       res = Net::HTTP.new(url.host, url.port)
       res.use_ssl = true
 
+      locality = nil
+      country = nil
       res.start do |http|
         resp = http.request(req)
         json = JSON.parse(resp.body)
@@ -30,19 +32,19 @@ class Api::V1::GeocodesController < Api::ApiController
           if json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'locality' }
             place = json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'locality' }
             if place[0]
-              @geocode[:locality] = place[0]['long_name']
+              locality = place[0]['long_name']
             end
           end
           if  json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'country' }
             place = json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'country' }
             if place[0]
-              @geocode[:country] = place[0]['long_name']
+              country = place[0]['long_name']
             end
           end
         end
       end
 
-      @geocode = Geocode.create(@geocode)
+      @geocode = Geocode.find_or_create_by(latitude: latitude, longitude: longitude, locality: locality, country: country)
 
     end
 
