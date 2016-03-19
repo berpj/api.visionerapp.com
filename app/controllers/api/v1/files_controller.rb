@@ -3,9 +3,16 @@ class Api::V1::FilesController < Api::ApiController
   before_action :authenticate
   #before_action :validate_rpm
 
-  def upload
+  def upload # replace by create or read
+
+    require 'digest/md5'
 
     b64_data = params[:data]
+
+    # Check if already in DB
+
+    md5 = Digest::MD5.hexdigest(b64_data)
+
 
     # Prepare request
     api_key = ENV['GOOGLE_API_KEY']
@@ -41,6 +48,8 @@ class Api::V1::FilesController < Api::ApiController
         label = label.tr(" ", "-")
       end
     end
+
+    # Create in DB
 
     if label
       render json: {label: label}, status: :ok

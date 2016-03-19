@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160311182141) do
+ActiveRecord::Schema.define(version: 20160319033801) do
+
+  create_table "geocodes", force: :cascade do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "locality"
+    t.string   "country"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "md5"
+    t.string   "label"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "api_key"

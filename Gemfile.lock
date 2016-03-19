@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails/rails.git
-  revision: b76b817629bf1504e3109c9872b250513690561d
+  revision: dda31d59a03adb7e5aa372e72bb66a3886632f2f
   specs:
     actioncable (5.0.0.beta3)
       actionpack (= 5.0.0.beta3)
@@ -86,7 +86,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
-    puma (3.1.0)
+    puma (3.1.1)
     rack (2.0.0.alpha)
       json
     rack-test (0.6.3)
@@ -99,7 +99,7 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rake (11.1.0)
+    rake (11.1.1)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)

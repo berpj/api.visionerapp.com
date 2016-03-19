@@ -9,6 +9,8 @@ class Api::V1::GeocodesController < Api::ApiController
     longitude = params[:longitude]
     type = params[:type]
 
+    # Check if already in DB
+
     # Prepare request
     api_key = ENV['GOOGLE_API_KEY']
     content_type = "Content-Type: application/json"
@@ -30,6 +32,8 @@ class Api::V1::GeocodesController < Api::ApiController
         end
       end
     end
+
+    # Create in DB
 
     if place
       render json: {place: place}, status: :ok
