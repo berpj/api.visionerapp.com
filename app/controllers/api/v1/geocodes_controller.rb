@@ -31,7 +31,7 @@ class Api::V1::GeocodesController < Api::ApiController
       end
     end
 
-    if label
+    if place
       render json: {place: place}, status: :ok
     else
       render json: {place: 'unknown'}, status: :unprocessable_entity
