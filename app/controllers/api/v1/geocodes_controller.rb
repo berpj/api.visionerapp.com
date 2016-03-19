@@ -17,9 +17,7 @@ class Api::V1::GeocodesController < Api::ApiController
       @geocode = {latitude: latitude, longitude: longitude, country: nil, locality: nil}
 
       # Prepare request
-      api_key = ENV['GOOGLE_API_KEY']
-      content_type = "Content-Type: application/json"
-      url = "https://maps.googleapis.com/maps/api/geocode/json?key=#{api_key}&latlng=#{latitude},#{longitude}"
+      url = "https://maps.googleapis.com/maps/api/geocode/json?key=#{ENV['GOOGLE_API_KEY']}&latlng=#{latitude},#{longitude}"
       url = URI(url)
       req = Net::HTTP::Get.new(url, initheader = {'Content-Type' =>'application/json'})
       res = Net::HTTP.new(url.host, url.port)
@@ -32,13 +30,13 @@ class Api::V1::GeocodesController < Api::ApiController
           if json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'locality' }
             place = json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'locality' }
             if place[0]
-              @geocode[:locality] = place[0]['long_name'].downcase.tr(" ", "-")
+              @geocode[:locality] = place[0]['long_name']
             end
           end
           if  json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'country' }
             place = json['results'][0]['address_components'].select {|address_component| address_component['types'][0] == 'country' }
             if place[0]
-              @geocode[:country] = place[0]['long_name'].downcase.tr(" ", "-")
+              @geocode[:country] = place[0]['long_name']
             end
           end
         end
