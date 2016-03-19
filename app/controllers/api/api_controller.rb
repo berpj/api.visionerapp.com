@@ -7,12 +7,5 @@ class Api::ApiController < ActionController::Base
       @user = User.where(api_key: token).first
     end
   end
-
-  #def validate_rpm
-  #  if ApiRpmStore.threshold?(@user.id, @user.api_rpm) # 10 request per min
-  #    render json: { help: 'pj@bergeron.io' }, status: :too_many_requests
-  #    return false
-  #  end
-  #end
-
+  
 end

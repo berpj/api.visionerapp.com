@@ -1,7 +1,6 @@
 class Api::V1::GeocodesController < Api::ApiController
 
   before_action :authenticate
-  #before_action :validate_rpm
 
   respond_to :json
 
