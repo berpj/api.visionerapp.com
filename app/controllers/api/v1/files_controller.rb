@@ -3,6 +3,8 @@ class Api::V1::FilesController < Api::ApiController
   before_action :authenticate
   #before_action :validate_rpm
 
+  respond_to :json
+
   def upload # replace by create or read
 
     require 'digest/md5'
