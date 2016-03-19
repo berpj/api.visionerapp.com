@@ -10,7 +10,7 @@ class Api::V1::GeocodesController < Api::ApiController
     longitude = '%.3f' % params[:longitude]
 
     # Check if already in DB
-    @geocode = Geocode.where(latitude: latitude, longitude: longitude)
+    @geocode = Geocode.where(latitude: latitude, longitude: longitude).first
 
     if @geocode.blank?
 

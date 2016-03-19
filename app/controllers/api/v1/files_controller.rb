@@ -14,7 +14,7 @@ class Api::V1::FilesController < Api::ApiController
     md5 = Digest::MD5.hexdigest(b64_data)
 
     # Check if already in DB
-    @image = Image.where(md5: md5)
+    @image = Image.where(md5: md5).first
 
     if @image.blank?
 
