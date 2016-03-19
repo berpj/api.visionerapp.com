@@ -5694,3 +5694,220 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21&type=country" for ::1 at 2016-03-19 13:26:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21", "type"=>"country"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:26:39 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:26:42 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:26:50 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.5ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.3418], ["longitude", 2.21], ["locality", "rouvres-saint-jean"], ["country", "france"], ["created_at", 2016-03-19 12:26:51 UTC], ["updated_at", 2016-03-19 12:26:51 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 642ms (Views: 0.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:27:15 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.1ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:27:33 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:27:35 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:27:43 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.1ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.22" for ::1 at 2016-03-19 13:27:45 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.22"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.22]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.3418], ["longitude", 2.22], ["locality", "roinvilliers"], ["country", "france"], ["created_at", 2016-03-19 12:27:45 UTC], ["updated_at", 2016-03-19 12:27:45 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 123ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.18&longitude=2.22" for ::1 at 2016-03-19 13:27:51 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.18", "longitude"=>"2.22"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.18], ["longitude", 2.22]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.18], ["longitude", 2.22], ["locality", "pithiviers-le-vieil"], ["country", "france"], ["created_at", 2016-03-19 12:27:51 UTC], ["updated_at", 2016-03-19 12:27:51 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 160ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.18&longitude=1" for ::1 at 2016-03-19 13:27:54 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.18", "longitude"=>"1"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.18], ["longitude", 1.0]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.18], ["longitude", 1.0], ["locality", "les-autels-villevillon"], ["country", "france"], ["created_at", 2016-03-19 12:27:54 UTC], ["updated_at", 2016-03-19 12:27:54 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 164ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.18&longitude=19" for ::1 at 2016-03-19 13:27:58 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.18", "longitude"=>"19"}
+  [1m[36mGeocode Load (0.3ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.18], ["longitude", 19.0]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.18], ["longitude", 19.0], ["locality", "rykynčice"], ["country", "slovakia"], ["created_at", 2016-03-19 12:27:58 UTC], ["updated_at", 2016-03-19 12:27:58 UTC]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 122ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21&type=country" for ::1 at 2016-03-19 13:28:54 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21", "type"=>"country"}
+  [1m[36mGeocode Load (0.4ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:28:56 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:28:57 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:02 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:03 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:04 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.3418], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:32 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.1ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.342], ["longitude", 2.21], ["locality", "rouvres-saint-jean"], ["country", "france"], ["created_at", 2016-03-19 12:29:32 UTC], ["updated_at", 2016-03-19 12:29:32 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 146ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:36 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:43 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:44 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3418&longitude=2.21" for ::1 at 2016-03-19 13:29:44 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3418", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3419&longitude=2.21" for ::1 at 2016-03-19 13:29:53 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3419", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3419&longitude=2.21" for ::1 at 2016-03-19 13:29:54 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3419", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.3ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.342], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3410&longitude=2.21" for ::1 at 2016-03-19 13:29:58 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3410", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.341], ["longitude", 2.21]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "geocodes" ("latitude", "longitude", "locality", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["latitude", 48.341], ["longitude", 2.21], ["locality", "rouvres-saint-jean"], ["country", "france"], ["created_at", 2016-03-19 12:29:58 UTC], ["updated_at", 2016-03-19 12:29:58 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 121ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/geocode?latitude=48.3410&longitude=2.21" for ::1 at 2016-03-19 13:30:02 +0100
+Processing by Api::V1::GeocodesController#read as HTML
+  Parameters: {"latitude"=>"48.3410", "longitude"=>"2.21"}
+  [1m[36mGeocode Load (0.2ms)[0m  [1m[34mSELECT "geocodes".* FROM "geocodes" WHERE "geocodes"."latitude" = ? AND "geocodes"."longitude" = ?[0m  [["latitude", 48.341], ["longitude", 2.21]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
