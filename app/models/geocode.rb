@@ -1,5 +1,5 @@
 class Geocode < ApplicationRecord
 
-  validates_uniqueness_of :geocode, :scope => [:latitude, :longitude]
+  validates_uniqueness_of :latitude, :scope => [:longitude]
 
 end
