@@ -45,7 +45,7 @@ class Api::V1::FilesController < Api::ApiController
     if label
       render json: {label: label}, status: :ok
     else
-      render json: {label: 'error'}, status: :unprocessable_entity
+      render json: {label: 'unknown'}, status: :unprocessable_entity
     end
   end
 
