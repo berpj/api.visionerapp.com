@@ -1,4 +1,4 @@
-class Api::V1::GeocodesController < ApplicationController
+class V1::GeocodesController < ApplicationController
 
   before_action :authenticate
 
