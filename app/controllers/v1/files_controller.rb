@@ -1,4 +1,4 @@
-class Api::V1::FilesController < Api::ApiController
+class Api::V1::FilesController < ApplicationController
 
   before_action :authenticate
 

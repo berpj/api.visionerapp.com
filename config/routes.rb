@@ -4,10 +4,8 @@ Rails.application.routes.draw do
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
 
-  namespace :api do
-    namespace :v1 do
-      post 'label' => 'files#upload'
-      get 'geocode' => 'geocodes#read'
-    end
+  namespace :v1 do
+    post 'label' => 'files#upload'
+    get 'geocode' => 'geocodes#read'
   end
 end
