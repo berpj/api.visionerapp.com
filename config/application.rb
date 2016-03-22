@@ -20,8 +20,8 @@ module VisionApi2
   class Application < Rails::Application
     require 'rack/throttle'
 
-    config.middleware.use Rack::Throttle::Minute,   :max => 120
-    config.middleware.use Rack::Throttle::Hourly,   :max => 3600
+    config.middleware.use Rack::Throttle::Minute,   :max => 240
+    config.middleware.use Rack::Throttle::Hourly,   :max => 7200
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
